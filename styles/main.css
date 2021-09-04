@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+
+.container {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: url(../public/images/pattern-bg.png);
+  background-size: cover;
+  gap: 2rem;
+  padding: 2rem 0;
+  height: 17rem;
+}
+
+header .title {
+  color: white;
+  font-weight: 400;
+}
+
+.input-section {
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.input-section input {
+  height: inherit;
+  width: 500px;
+  font-size: 18px;
+  padding-left: 25px;
+  border-radius: 15px 0 0 15px;
+  border: none;
+  outline: none;
+}
+
+.input-section button {
+  width: 60px;
+  border-radius: 0 25% 25% 0;
+  background: black url(../public/images/icon-arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  outline: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.input-section button:hover {
+  background-color: #2b2b2b;
+}
+
+.info {
+  padding: 0 2rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: white;
+  border-radius: 15px;
+  position: absolute;
+  z-index: 10;
+  top: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-line-clamp: 2;
+}
+
+.info div {
+  margin: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 170px;
+  gap: 0.7rem;
+}
+
+.info div:nth-child(1n + 2) {
+  padding-left: 1rem;
+  border-left: 1px solid #d9d9d9;
+}
+
+.info .label {
+  text-transform: uppercase;
+  color: #969696;
+  font-size: 0.813rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
+.info .data {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2b2b2b;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .input-section {
+    width: 80%;
+  }
+  .input-section input {
+    width: 100%;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 80%;
+  }
+  .info div {
+    margin: 1.2rem 0;
+  }
+  .info div:nth-child(1n + 2) {
+    padding-left: 0rem;
+    border-left: none;
+  }
+  .box {
+    margin: 0.8rem 0.5rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    text-align: center;
+  }
+  .label {
+    text-align: center;
+    font-size: 12px;
+    padding-top: 0.5rem;
+  }
+}
+
+#mapid {
+  height: inherit;
+  z-index: -1;
+}
+/*# sourceMappingURL=main.css.map */

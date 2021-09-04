@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/images/favicon-32x32.png">
+    <link rel="stylesheet" href="/styles/main.css">
+
+    <!--Leaflet stuff -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+
+     <!-- Leaflet scripts -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1 class="title">IP Address Tracker</h1>
+            <div class="input-section">
+                <input placeholder="Search for any IP address or domain" type="text" name="" id="input" onchange="getIP()">
+                <button type="button" id="btn" onclick="sendIP()">
+            </div>
+
+            <div class="info">
+                <div class="box">
+                    <p class="label">Ip address</p>
+                    <p class="data" id="ip">192.212.174.101</p>
+                </div>
+
+                <div class="box">
+                    <p class="label">Location</p>
+                    <p class="data" ><span id="location">Brooklyn, NY </span><br /><span id="cep">10001</span></p>
+                </div>
+
+                <div class="box">
+                    <p class="label">Timezone</p>
+                    <p class="data" id="timezone">UTC -05:00</p>
+                </div>
+
+                <div class="box">
+                    <p class="label">Isp</p>
+                    <p class="data" id="isp">SpaceX <br /> Starlink</p>
+                </div>
+            </div>
+        </header>
+        <div id="mapid"></div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
