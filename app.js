@@ -4,11 +4,8 @@ window.onload = () => {
 	sendIP()
 }
 
-function getIP() {
-	ip = document.getElementById("input").value;
-}
-
 function sendIP() {
+	ip = document.getElementById("input").value;
 
 	fetch(
 		`https://ipgeolocation.abstractapi.com/v1/?api_key=b09bc0b236f14f2c8da72cd2fc038b75&ip_address=${ip}`
@@ -59,5 +56,10 @@ function sendIP() {
 					zoomOffset: -1,
 					accessToken: 'pk.eyJ1IjoiY2Fpa2U3MiIsImEiOiJja3JhcDJjbDI0bGNyMnBtdGgwbWg4OGF6In0.j7aIcPIN99U8Vjt9Q7K-qg'
 				}).addTo(mymap);
+				
+				mymap.invalidateSize()
+
 		});
+
+		console.log(data.latitude)
 }
