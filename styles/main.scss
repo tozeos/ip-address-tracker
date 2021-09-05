@@ -105,6 +105,28 @@ header {
 		font-weight: 700;
 		color: $VeryDarkGray;
 	}
+
+	@media (max-width: 504px) {
+		.info {
+			margin: 0.5rem 0;
+		}
+
+		div {
+			margin: 0;
+		}
+
+		.box {
+			margin: 0.5rem;
+		}
+
+		.label {
+			font-size: 0.7;
+		}
+
+		.data {
+			font-size: 1rem;
+		}
+	}
 }
 
 @media (max-width: 768px) {

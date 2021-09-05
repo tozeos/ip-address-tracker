@@ -57,9 +57,7 @@ function sendIP() {
 					accessToken: 'pk.eyJ1IjoiY2Fpa2U3MiIsImEiOiJja3JhcDJjbDI0bGNyMnBtdGgwbWg4OGF6In0.j7aIcPIN99U8Vjt9Q7K-qg'
 				}).addTo(mymap);
 				
-				mymap.invalidateSize()
+				mymap.invalidateSize() // método que atualiza o mapa
 
 		});
-
-		console.log(data.latitude)
 }

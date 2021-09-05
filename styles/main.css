@@ -119,6 +119,24 @@ header .title {
   color: #2b2b2b;
 }
 
+@media (max-width: 504px) {
+  .info .info {
+    margin: 0.5rem 0;
+  }
+  .info div {
+    margin: 0;
+  }
+  .info .box {
+    margin: 0.5rem;
+  }
+  .info .label {
+    font-size: 0.7;
+  }
+  .info .data {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .title {
     font-size: 1.5rem;
