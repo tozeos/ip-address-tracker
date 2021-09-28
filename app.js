@@ -31,33 +31,39 @@ function sendIP() {
 
 			/* Leaflet map */
 
-			// NEXT FIND A WAY TO UPDATE THE MAP WHEN PUTTING NEW IP
-			// PERHAPS I HAVE TO CHANGE THE CODE A LITTLE BIT :)
-			// I HOPE I DON'T NEED IT
+			// Find a way to center the point
+			// Fix the marker
 			
+				var container = L.DomUtil.get('mapid');
+				
+				if(container != null){
+				container._leaflet_id = null;
+				}
+
 				var latlong = [data.latitude, data.longitude]
 
-				var mymap = L.map('mapid').setView(latlong, 13);
+				// var mymap = L.map('mapid').setView(latlong, 25);
+				var mymap = L.map('mapid', {
+					center: latlong,
+					zoom: 30
+				});
 
 				var icon = L.icon({
 					iconUrl: './public/images/icon-location.svg',
 				
-					iconSize:     [24, 30], // size of the icon
-					iconAnchor:   [30, 30], // point of the icon which will correspond to marker's location
+					iconSize:     [22, 28], // size of the icon
+					iconAnchor:   [0, 0], // point of the icon which will correspond to marker's location
 				});
 
 
 				var marker = L.marker(latlong, {icon: icon}).addTo(mymap);
 				L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
 					attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-					maxZoom: 12,
+					maxZoom: 14,
 					id: 'mapbox/streets-v11',
 					tileSize: 512,
 					zoomOffset: -1,
 					accessToken: 'pk.eyJ1IjoiY2Fpa2U3MiIsImEiOiJja3JhcDJjbDI0bGNyMnBtdGgwbWg4OGF6In0.j7aIcPIN99U8Vjt9Q7K-qg'
 				}).addTo(mymap);
-				
-				mymap.invalidateSize() // método que atualiza o mapa
-
 		});
 }
